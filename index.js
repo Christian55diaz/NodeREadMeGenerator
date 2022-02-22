@@ -54,7 +54,7 @@ const questions=
                return console.error("err");
             }
             else{
-                console.log("Went Smoothly");
+                console.log("Readme generated");
             }
         });
     }
@@ -63,17 +63,13 @@ const questions=
 //async function to initialize app
 async function init() {
     //using the try statment because just in case there was an error it would catch something went wrong
-    console.log("Welcome to my READMe Generator, answer the prompts to get your own personal README!");
     try {
         // data=answers
         const data= await inquier.prompt(questions);
-        console.log("Your Responses:", data);
         // gets answers, puts them into the markdown file
         const markdown= generateMarkdown(data);
-        console.log(markdown);
         // save readme file
         await asyncWriteFile('README.md', markdown);
-        console.log("saved your readme!!");
     } catch (error) {
         console.error("error");
     }
