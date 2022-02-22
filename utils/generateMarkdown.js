@@ -2245,30 +2245,30 @@ function generateMarkdown(data) {
   var licenseSection= renderLicenseSection(data.license)
   // allowing for the return left as a variable will allow for a cleaner retunr
   return `# ${data.title}
-  \n## Table Of Contents
-  \n* [Description](#Description)
-  \n* [Author](#Author)
-  \n* [Installation](#Installation)
-  \n* [Usage](#Usage)
-  \n* [Credits](#Credits)
-  \n* [License](#License)
-  \n## Description
-  \n${data.description}
-  \n## Author
-  \nName: ${data.author}
-  \nContact email: ${data.email}
-  \nGitHub: [${data.github}](https://github.com/${data.github}) \n
-  \n## Installation
-  \n${data.install}
-  \n## Usage
-  \n${data.usage}
-  \n## Credits
-  \n${data.credits}
-  \n## License
-  \n![License](${licenseBadge} \n
-  \nThis project is licensed under the ${data.license}: To get a better look at [License] visit (${licenseUrl}).
-  \n${licenseSection}
-   `
+## Table Of Contents
+* [Description](#Description)
+* [Author](#Author)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [Credits](#Credits)
+* [License](#License)
+## Description
+${data.description}
+## Author
+Name: ${data.author}
+Contact email: ${data.email}
+GitHub: [${data.github}](https://github.com/${data.github})  
+## Installation
+${data.install}
+## Usage
+${data.usage}
+## Credits
+${data.credits}
+## License
+![License](${licenseBadge}  
+This project is licensed under the ${data.license}: To get a better look at [License] visit (${licenseUrl}).
+${licenseSection}
+`
   
   
   // return result;
